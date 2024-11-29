@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 5173
+EXPOSE 5137
 
 ENTRYPOINT [ "npm" ]
 
@@ -23,16 +23,19 @@ CMD ["run", "dev"]
 # If it is not available, create it with the command:
 # docker network create mynet
 
+# THIS SHOULD BE THE LAST CONTAINER TO RUN
 # Command to run the container
 # docker run \
 #   --detach \
 #   --interactive \
 #   --tty \
 #   --env VITE_HOST=0.0.0.0 \
-#   --env VITE_PORT=5173 \
-#   --publish 5173:5173 \
+#   --env VITE_PORT=5137 \
+#   --publish 5137:5137 \
 #   --network mynet \
 #   avatares-devops-web:v1
 
 # To visualize in the explorer
 # http://localhost:5173
+
+## TODO: Investigate how to get the IP address from the API container and pass it to the WEB container as an envariable.

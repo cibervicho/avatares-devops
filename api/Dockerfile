@@ -19,6 +19,7 @@ CMD [ "-m" , "flask", "run", "--host", "0.0.0.0", "--port", "5000"]
 # If it is not available, create it with the command:
 # docker network create mynet
 
+# THIS SHOULD BE RUN FIRST
 # Command to run the container
 # docker run \
 #   --detach \
@@ -26,8 +27,8 @@ CMD [ "-m" , "flask", "run", "--host", "0.0.0.0", "--port", "5000"]
 #   --tty \
 #   --env FLASK_APP=app.py \
 #   --env FLASK_ENV=development \
-#   --publish 5000:5000 \
 #   --network mynet \
+#   --publish 5000:5000 \
 #   avatares-devops-api:v1
 
 # To visualize in the explorer

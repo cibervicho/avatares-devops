@@ -57,7 +57,7 @@ function App() {
     if (error) {
         return <div>Failed to load: {error}</div>
     } else if (loading) {
-        return <div>Loading...</div>
+        return <div>Loading ding ding ding...</div>
     } else {
         return <>
             <div className={"avatar-wrapper"}>
